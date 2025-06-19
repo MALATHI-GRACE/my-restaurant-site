@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRACIOUS DINE</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <!-- <title>Order Online - Combo Offers</title> -->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .combo-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            margin-bottom: 20px;
+        }
+        .combo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .combo-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .combo-item h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .combo-item p{
+            color: rgb(95, 94, 94);
+        }
+
+        .combo-item img {
+            width: 100%;
+            max-width: 500px; /* Adjusted maximum width for larger images */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .combo-item-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .combo-item-description {
+            flex: 1;
+            padding: 0 10px;
+            text-align: left;
+        }
+        .combo-item-price {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .add-to-cart, .save-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+        }
+        .save-item {
+            background-color: transparent;
+            color: black;
+        }
+        .save-icon {
+            margin-right: 5px;
+        }
+        /* @media (min-width: 900px) and (max-width:1280px){
+            .combo-grid {
+                grid-template-columns: repeat(2, 1fr); /* Two items per row for larger screens 
+            }
+            .combo-item-details {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            .combo-item img {
+                width: 100%;
+                max-width: 400px; /* Adjusted maximum width for larger images 
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+            .buttons {
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                margin-top: 10px;
+                width: 100%;
+            }
+            .add-to-cart, .save-item {
+                margin: 0 10px;
+            }
+        } */
+
+
+        @media (min-width: 1400px) {
+    .combo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row for larger screens */
+    }
+    .combo-item-details {
+        display: flex;
+        flex-direction: row; /* Arrange image and paragraph in a row */
+        justify-content: space-between;
+        align-items: center;
+    }
+    .combo-item img {
+        width: 100%;
+        max-width: 400px; /* Adjusted maximum width for larger images */
+        margin-right: 20px; /* Space between image and paragraph */
+        margin-bottom: 0;
+    }
+    .buttons {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .add-to-cart, .save-item {
+        margin: 0 10px;
+    }
+}
+
+
+
+        @media (max-width: 1400px)  {
+    .combo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row for larger screens */
+    }
+    .combo-item-details {
+        flex-direction: column; /* Arrange details in a column, with text below the image */
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .combo-item img {
+        width: 100%;
+        max-width: 400px; /* Adjusted maximum width for larger images */
+        margin-bottom: 10px; /* Space between image and paragraph */
+    }
+    .buttons {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .add-to-cart, .save-item {
+        margin: 0 10px;
+    }
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+
+    <div class="combo-section">
+        <p style="font-size: 24px; font-weight: bold;">Combo Craze!!  Deliciousness Delivered to Your Doorstep</p>
+        <p style="color: rgb(151, 150, 150);">Enjoy our exclusive combo deals at great prices!</p>
+    </div>
+    <div class="combo-grid">
+        <div class="combo-item">
+            <h3>Combo 1: The Classic</h3>
+            <div class="combo-item-details">
+                <img src="./assets/pexels-renestrgar-19968430.jpg" alt="Combo 1" class="combo-image">
+                <div class="combo-item-description">
+                    <p>Delight in the timeless flavors of our Classic Combo. This meal features two classic Margherita pizzas, each crafted to perfection with a slightly charred, thick crust..</p>
+                    <p>Topped with a vibrant red tomato sauce, fresh basil leaves, and slices of garlic.</p>
+                    <p class="combo-item-price">₹1999</p>
+                    <div class="buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="save-item" onclick="saveItem('Combo 1')">
+                            <i class="fas fa-bookmark save-icon"></i> Wish List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="combo-item">
+            <h3>Combo 2: Family Feast</h3>
+            <div class="combo-item-details">
+                <img src="./assets/pexels-chutney-indian-584962565-17050759.jpg" alt="Combo 2" class="combo-image">
+                <div class="combo-item-description">
+                    <p>Indulge in a delightful array of Indian cuisine with appetizing spread features crispy samosas, savory pakoras, rich curries, and aromatic biryani.</p>
+                    <p>Complement your meal with warm naan bread and fluffy basmati rice. To complete the feast, savor our selection of delectable desserts, including gulab jamun and rasgulla, for a sweet ending to a perfect meal.</p>
+                    <p class="combo-item-price">₹3199</p>
+                    <div class="buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="save-item" onclick="saveItem('Combo 2')">
+                            <i class="fas fa-bookmark save-icon"></i> Wish List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="combo-item">
+            <h3>Combo 3: Vegetarian Delight</h3>
+            <div class="combo-item-details">
+                <img src="./assets/pexels-saveurssecretes-14132112.jpg" alt="Combo 3" class="combo-image">
+                <div class="combo-item-description">
+                    <p>Experience the diverse flavors of South Indian cuisine with a traditional banana leaf.</p> 
+                    <p>This includes generous serving of rice topped with flavorful curry, a variety of vegetable dishes such as avial, thoran, and pachadi, different types of pickles and chutneys.</p>
+                    <p> Enjoy banana chips, papadum and delicious sweets like payasam, Accompanied by buttermilk and a refreshing traditional Indian drink.</p>
+                    <p class="combo-item-price">₹1199</p>
+                    <div class="buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="save-item" onclick="saveItem('Combo 3')">
+                            <i class="fas fa-bookmark save-icon"></i> Wish List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="combo-item">
+            <h3>Combo 4: Seafood Extravaganza</h3>
+            <div class="combo-item-details">
+                <img src="./assets/pexels-picsfast-8753672.jpg" alt="Combo 4" class="combo-image">
+                <div class="combo-item-description">
+                    <p>Dive into a bountiful feast of ocean treasures with our Seafood Extravaganza combo. This luxurious meal features a rich selection of the freshest seafood delicacies, including succulent grilled shrimp, perfectly seared scallops, and tender lobster tail, all drizzled with garlic butter</p>
+                    <p>To round out this seafood feast, enjoy a refreshing seafood salad made with an assortment of delicate seafood, crisp greens, and a light citrus dressing</p>
+                    <p class="combo-item-price">₹2299</p>
+                    <div class="buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="save-item" onclick="saveItem('Combo 4')">
+                            <i class="fas fa-bookmark save-icon"></i> Wish List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="combo-item">
+            <h3>Combo 5: Burger Combo</h3>
+            <div class="combo-item-details">
+                <img src="./assets/pexels-jonathanborba-19247564.jpg" alt="Combo 5" class="combo-image">
+                <div class="combo-item-description">
+                    <p>Savor the ultimate burger experience with our Cheesy Bacon Burger Bliss. </p>
+                    <p> This mouthwatering combo features a melted cheddar cheese, crispy bacon strips,all nestled in a soft, gol den-brown bun.</p>
+                        <p> Paired with a side of perfectly golden French fries and a refreshing glass of ice-cold soda.</p>
+                    <p class="combo-item-price">₹799</p>
+                    <div class="buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="save-item" onclick="saveItem('Combo 5')">
+                            <i class="fas fa-bookmark save-icon"></i> Wish List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="combo-item">
+            <h3>Combo 6: Desserts Sensations </h3>
+            <div class="combo-item-details">
+                <img src="./assets/pexels-igor-ovsyannykov-56123-205961.jpg" alt="Combo 6" class="combo-image">
+                <div class="combo-item-description">
+                    <p>Indulge in our Sweet Sensations combo of freshly baked pastries and desserts, perfect for any dessert lover. </p>
+                    <p>Enjoy a selection of our finest donuts with an array of toppings, including powdered sugar, chocolate glaze, and colorful sprinkles. </p>
+                    <p>Irresistible cake pops, covered in vibrant coatings, and other baked goods.</p>
+                    <p class="combo-item-price">₹659</p>
+                    <div class="buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="save-item" onclick="saveItem('Combo 6')">
+                            <i class="fas fa-bookmark save-icon"></i> Wish List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for other combos as needed -->
+    </div>
+    <script>
+        // JavaScript to handle saved items
+        let savedItems = [];
+    
+        function saveItem(itemName) {
+            if (!savedItems.includes(itemName)) {
+                savedItems.push(itemName);
+                alert(itemName + " has been added to your saved items.");
+            } else {
+                alert(itemName + " is already in your saved items.");
+            }
+            console.log(savedItems); // For debugging, remove or comment out in production
+        }
+    </script>
+
+
+       <!-- Footer placeholder -->
+       <div id="footer-placeholder"></div>
+
+       <script>
+        // JavaScript to load the combined header and footer from the parent directory
+        fetch('header_Footer.html')
+            .then(response => response.text())
+            .then(data => {
+                // Create a temporary element to parse the response
+                const temp = document.createElement('div');
+                temp.innerHTML = data;
+
+                // Extract and insert the header content
+                const headerContent = temp.querySelector('header').outerHTML;
+                document.getElementById('header-placeholder').innerHTML = headerContent;
+
+                // Extract and insert the footer content
+                const footerContent = temp.querySelector('footer').outerHTML;
+                document.getElementById('footer-placeholder').innerHTML = footerContent;
+            });
+    </script>
+
+
+
+
+
+</body>
+</html>

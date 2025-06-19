@@ -1,0 +1,203 @@
+.sidebar {
+    position: fixed;
+    top: 127px;
+    left: 0;
+    width: 200px;
+    /* height: 100%; */
+    height: calc(100vh - 127px); /* Adjust height accordingly */
+    background-color: #001F3F;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    float:left;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    margin: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.sidebar ul li {
+    margin: 12px 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 3px;
+    width: 90%; /* Center content within the full width */ 
+    text-align: center; /* Center align the text */
+}
+
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #ddd;
+    color: black;
+    width: 90%;
+}
+
+.active-container { 
+    display: flex; /* Show the active container */ 
+}
+
+.container h3{
+    font-size: 20px;
+}
+
+
+/* Style for the image container */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Add space between the images */
+    background-color: #f4f4f4; /* Set the background color for the container */
+    padding: 10px; /* Add some padding */
+    margin-left: 240px; /* Adjusted based on sidebar width */
+    /* padding-top: 90px; /* Adjust the padding as needed to create space 
+    scroll-margin-top: 100px; /* Adjust the scroll margin to create space when linking  */
+}
+
+.image-container div {
+    width: 48%; /* Set each image container to 48% of the width */
+    margin-bottom: 20px; /* Add some space below each image */
+    background-color: #e0e0e0; /* Set the background color for each image box */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add some shadow for better visual separation */
+}
+
+/* Style for the images */
+.image-container img {
+    width: 95%; /* Ensure the image takes full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Ensure the image does not exceed container width */
+    display: block;
+    margin: 0 auto; /* Center the images */
+    height: 350px; /* Set a fixed height for all images */ 
+    object-fit: cover; /* Ensure image fits within the set dimensions */
+}
+
+/* Style for the text below images */
+.image-container p {
+    text-align: center; /* Center the text */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Add scroll margin for the linked sections */
+#starters, #pizza_pasta, #main_courses, #desserts, #Cakes_Pastries, #Chilled_Treats, #beverages {
+    scroll-margin-top: 180px; /* Adjust the scroll margin as needed */
+}
+
+
+
+/* Media query for tablets and smaller screens */ 
+@media (max-width: 770px) {
+     .image-container {
+         margin-left: 0; /* Remove left margin for smaller screens */ 
+         justify-content: center; /* Center align the images */ 
+         /* margin-bottom: 300px; */
+        } 
+        .image-container div {
+             width: 100%; /* Set each image container to 100% of the width */
+         
+            }
+              .sidebar {
+                 position: fixed; /* Make sidebar static for smaller screens */ 
+                 width: 100%; /* Make sidebar full width */ 
+                 left: 0; 
+                 height: 180px; 
+                 box-shadow: none; /* Remove box shadow */ 
+                 z-index: 1000;
+                } 
+                .sidebar ul { 
+                    flex-direction: row; /* Change to row direction */ 
+                    justify-content: space-around; /* Add space between menu items */ 
+                
+                } 
+                .sidebar ul li { 
+                    border: none; /* Remove border for smaller screens */ 
+                } 
+                .sidebar ul li a:hover, .sidebar ul li a.active {
+                    background-color: #ddd;
+                    color: black;
+                    width: 90%;
+                }
+                
+                .active-container { 
+                    display: flex; /* Show the active container */ 
+                
+                }
+                
+                .container h3{
+                    font-size: 25px;
+                }
+
+    /* Add scroll margin for the linked sections */
+       #starters, #pizza_pasta, #main_courses, #desserts, #Cakes_Pastries, #Chilled_Treats, #beverages {
+        scroll-margin-top: 380px; /* Adjust the scroll margin as needed */
+    }
+            }     
+    
+/* Media query for mobile devices */ 
+@media screen and  (max-width: 480px) {
+
+    .sidebar {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; /* Centers items horizontally */
+        padding: 7px;
+        height: 140px;
+    }
+    .sidebar ul{
+        margin: 0;
+        height: 50px;
+        justify-content: center;
+        padding-bottom: 0;
+        font-size: 12px;
+        /* border-right: 1px solid white; */
+    }
+
+    .sidebar a:not(:last-child) {
+        border-right: 1px solid white; /* Adds right border to all links except the last */
+    }
+
+    .sidebar ul li a {
+        width: 100%; /* Makes links full width */
+        text-align: center; /* Centers text */
+        padding: 3px;
+    }
+    
+   
+
+
+
+    .image-container { 
+        margin-left: 0; /* Remove left margin */ 
+        justify-content: center;
+     
+     }
+    .image-container div {
+         width: 100%; /* Full width images */ 
+        
+        }  
+}
+        
+
+
+
+
+
