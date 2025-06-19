@@ -263,40 +263,12 @@
         </div>
     
     </div>
-    <script>
-    
-        let savedItems = [];
-    
-        function saveItem(itemName) {
-            if (!savedItems.includes(itemName)) {
-                savedItems.push(itemName);
-                alert(itemName + " has been added to your saved items.");
-            } else {
-                alert(itemName + " is already in your saved items.");
-            }
-            console.log(savedItems); 
-        }
-    </script>
+    <script src="./js/order.js"></script>
 
 
        <div id="footer-placeholder"></div>
 
-       <script>
-
-        fetch('header_Footer.html')
-            .then(response => response.text())
-            .then(data => {
-                
-                const temp = document.createElement('div');
-                temp.innerHTML = data;
-
-                const headerContent = temp.querySelector('header').outerHTML;
-                document.getElementById('header-placeholder').innerHTML = headerContent;
-
-                const footerContent = temp.querySelector('footer').outerHTML;
-                document.getElementById('footer-placeholder').innerHTML = footerContent;
-            });
-    </script>
+     <script src="./js/header_Footer.js"></script>
 
 </body>
 </html>
