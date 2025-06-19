@@ -6,7 +6,7 @@ A fully responsive restaurant website built using **HTML**, **CSS**, **JavaScrip
 
 - 🏠 **Home page** Overview of the restaurant (using Bootstrap for layout and styling).
 - 📋 **Menu page** showcasing food items
-- 🛒 **Order Online** with form to place orders
+- 🛒 **Order Online**  A visually appealing page displaying special combo meals with high-quality images, prices, and interactive buttons for Add to Cart and Wish List.
 -  **Services**:
 - 🎉 **Events & Catering** Form for catering and events inquiries and bookings
 - 📞 **About page** with restaurant info and story.

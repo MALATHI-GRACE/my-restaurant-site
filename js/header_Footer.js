@@ -1,5 +1,5 @@
 
-    fetch('../header_Footer.html')
+    fetch('header_Footer.html')
         .then(response => response.text())
         .then(data => {
             // Create a temporary element to parse the response

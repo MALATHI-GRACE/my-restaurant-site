@@ -14,7 +14,7 @@ h2{
     display: flex;
     top: 15px;
     height: calc(100vh - 100px); /* Adjust height to account for header and footer */
-    background: url('./assets/pexels-ella-olsson-572949-1640773.jpg') no-repeat center center/cover;
+    background: url('../assets/pexels-ella-olsson-572949-1640773.jpg') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
     background-size: cover;
