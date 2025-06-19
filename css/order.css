@@ -1,0 +1,135 @@
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .combo-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            margin-bottom: 20px;
+        }
+        .combo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .combo-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .combo-item h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .combo-item p{
+            color: rgb(95, 94, 94);
+        }
+
+        .combo-item img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .combo-item-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .combo-item-description {
+            flex: 1;
+            padding: 0 10px;
+            text-align: left;
+        }
+        .combo-item-price {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .add-to-cart, .save-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+        }
+        .save-item {
+            background-color: transparent;
+            color: black;
+        }
+        .save-icon {
+            margin-right: 5px;
+        }
+
+        @media (min-width: 1400px) {
+    .combo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row for larger screens */
+    }
+    .combo-item-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .combo-item img {
+        width: 100%;
+        max-width: 400px; 
+        margin-right: 20px; 
+        margin-bottom: 0;
+    }
+    .buttons {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .add-to-cart, .save-item {
+        margin: 0 10px;
+    }
+}
+
+
+    @media (max-width: 1400px)  {
+    .combo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row for larger screens */
+    }
+    .combo-item-details {
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .combo-item img {
+        width: 100%;
+        max-width: 400px; 
+        margin-bottom: 10px; 
+    }
+    .buttons {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .add-to-cart, .save-item {
+        margin: 0 10px;
+    }
+}
