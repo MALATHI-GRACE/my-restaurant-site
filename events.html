@@ -6,35 +6,11 @@
     <title>Private Events</title>
     <link rel="stylesheet" href="../css/home.css">
      
-    <!-- <style> 
-        .myclass 
-        { 
-            display: flex; 
-            justify-content: space-around; /* Distribute space around the items */ 
-            align-items: center; /* Center items vertically */ 
-            background-color: #001F3F; /* Background color for the navbar */ 
-            padding: 10px 0; /* Padding for the navbar */
-         } 
-        .myclass a 
-        { 
-            color: white; /* Text color */ 
-            text-decoration: none; /* Remove underline from links */ 
-            padding: 10px 20px; /* Padding around the links */ 
-            /* background-color: darkblue; Background color for the links  */
-            border-radius: 5px; /* Rounded corners */ 
-            font-size: 16px; /* Font size */ 
-        } 
-        .myclass a:hover 
-        { 
-            background-color: #175a9c; /* Darker blue on hover */ 
-        }
-     </style> -->
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
-            /* padding: 20px; */
             padding-top: 140px;
         }
 
@@ -108,9 +84,6 @@ function submitForm()
 <body>
    <!-- Header placeholder -->
    <div id="header-placeholder"></div>
-<!-- 
-    <h2>BOOK PRIVATE EVENTS</h2>
-        <a href="../home.html">Home</a> -->
 
 <div class="container">
     <h2>Private Events</h2>
@@ -149,19 +122,18 @@ function submitForm()
  <div id="footer-placeholder"></div>
 
  <script>
-  // JavaScript to load the combined header and footer from the parent directory
+  
   fetch('../header_Footer.html')
       .then(response => response.text())
       .then(data => {
-          // Create a temporary element to parse the response
+        
           const temp = document.createElement('div');
           temp.innerHTML = data;
 
-          // Extract and insert the header content
           const headerContent = temp.querySelector('header').outerHTML;
           document.getElementById('header-placeholder').innerHTML = headerContent;
 
-          // Extract and insert the footer content
+          
           const footerContent = temp.querySelector('footer').outerHTML;
           document.getElementById('footer-placeholder').innerHTML = footerContent;
       });

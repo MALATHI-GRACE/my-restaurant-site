@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRACIOUS DINE</title>
     <link rel="stylesheet" href="./css/home.css">
-    <!-- <title>Order Online - Combo Offers</title> -->
+   
     <style>
         *{
             box-sizing: border-box;
@@ -44,7 +44,7 @@
 
         .combo-item img {
             width: 100%;
-            max-width: 500px; /* Adjusted maximum width for larger images */
+            max-width: 500px;
             height: auto;
             margin-bottom: 10px;
         }
@@ -87,33 +87,6 @@
         .save-icon {
             margin-right: 5px;
         }
-        /* @media (min-width: 900px) and (max-width:1280px){
-            .combo-grid {
-                grid-template-columns: repeat(2, 1fr); /* Two items per row for larger screens 
-            }
-            .combo-item-details {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-            }
-            .combo-item img {
-                width: 100%;
-                max-width: 400px; /* Adjusted maximum width for larger images 
-                margin-right: 20px;
-                margin-bottom: 0;
-            }
-            .buttons {
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
-                margin-top: 10px;
-                width: 100%;
-            }
-            .add-to-cart, .save-item {
-                margin: 0 10px;
-            }
-        } */
-
 
         @media (min-width: 1400px) {
     .combo-grid {
@@ -121,14 +94,14 @@
     }
     .combo-item-details {
         display: flex;
-        flex-direction: row; /* Arrange image and paragraph in a row */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
     .combo-item img {
         width: 100%;
-        max-width: 400px; /* Adjusted maximum width for larger images */
-        margin-right: 20px; /* Space between image and paragraph */
+        max-width: 400px; 
+        margin-right: 20px; 
         margin-bottom: 0;
     }
     .buttons {
@@ -150,14 +123,14 @@
         grid-template-columns: repeat(2, 1fr); /* Two items per row for larger screens */
     }
     .combo-item-details {
-        flex-direction: column; /* Arrange details in a column, with text below the image */
+        flex-direction: column; 
         justify-content: flex-start;
         align-items: flex-start;
     }
     .combo-item img {
         width: 100%;
-        max-width: 400px; /* Adjusted maximum width for larger images */
-        margin-bottom: 10px; /* Space between image and paragraph */
+        max-width: 400px; 
+        margin-bottom: 10px; 
     }
     .buttons {
         flex-direction: row;
@@ -288,10 +261,10 @@
                 </div>
             </div>
         </div>
-        <!-- Repeat for other combos as needed -->
+    
     </div>
     <script>
-        // JavaScript to handle saved items
+    
         let savedItems = [];
     
         function saveItem(itemName) {
@@ -301,36 +274,29 @@
             } else {
                 alert(itemName + " is already in your saved items.");
             }
-            console.log(savedItems); // For debugging, remove or comment out in production
+            console.log(savedItems); 
         }
     </script>
 
 
-       <!-- Footer placeholder -->
        <div id="footer-placeholder"></div>
 
        <script>
-        // JavaScript to load the combined header and footer from the parent directory
+
         fetch('header_Footer.html')
             .then(response => response.text())
             .then(data => {
-                // Create a temporary element to parse the response
+                
                 const temp = document.createElement('div');
                 temp.innerHTML = data;
 
-                // Extract and insert the header content
                 const headerContent = temp.querySelector('header').outerHTML;
                 document.getElementById('header-placeholder').innerHTML = headerContent;
 
-                // Extract and insert the footer content
                 const footerContent = temp.querySelector('footer').outerHTML;
                 document.getElementById('footer-placeholder').innerHTML = footerContent;
             });
     </script>
-
-
-
-
 
 </body>
 </html>

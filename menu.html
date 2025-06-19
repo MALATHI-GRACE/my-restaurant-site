@@ -13,8 +13,6 @@
   <!-- Header placeholder -->
   <div id="header-placeholder"></div>
 
-  <!-- <div class="menu-btn" onclick="toggleSidebar()">☰</div> -->
-  <!-- <div class="sidebar" id="sidebar"> -->
     <div class="sidebar" id="sidebar"> 
         <h2>OUR MENU</h2>
         <ul>
@@ -110,7 +108,7 @@
     window.addEventListener('scroll', function() {
     var sidebar = document.getElementById('sidebar');
     var footer = document.getElementById('footer');
-    var tabs = document.querySelector('.fixed-tabs'); // Adjust this selector if needed
+    var tabs = document.querySelector('.fixed-tabs'); 
     var footerRect = footer.getBoundingClientRect();
     var sidebarHeight = sidebar.offsetHeight;
     var tabsHeight = tabs ? tabs.offsetHeight : 0;
@@ -126,37 +124,26 @@
 </script>
 
     
- <!-- Footer placeholder -->
+
        <div id="footer-placeholder"></div>
 
        <script>
-        // JavaScript to load the combined header and footer from the parent directory
+       
         fetch('header_Footer.html')
             .then(response => response.text())
             .then(data => {
-                // Create a temporary element to parse the response
+               
                 const temp = document.createElement('div');
                 temp.innerHTML = data;
 
-                // Extract and insert the header content
+               
                 const headerContent = temp.querySelector('header').outerHTML;
                 document.getElementById('header-placeholder').innerHTML = headerContent;
 
-                // Extract and insert the footer content
                 const footerContent = temp.querySelector('footer').outerHTML;
                 document.getElementById('footer-placeholder').innerHTML = footerContent;
             });
     </script>
-
-
-    <!-- <script>
- function toggleSidebar() {
-    var sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('active');
-}
-
-
-    </script> -->
 
 </body>
 </html>

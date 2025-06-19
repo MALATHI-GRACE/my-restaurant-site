@@ -3,7 +3,6 @@
     top: 127px;
     left: 0;
     width: 200px;
-    /* height: 100%; */
     height: calc(100vh - 127px); /* Adjust height accordingly */
     background-color: #001F3F;
     padding: 15px;
@@ -39,10 +38,9 @@ h2{
     padding: 10px;
     display: block;
     border-radius: 3px;
-    width: 90%; /* Center content within the full width */ 
-    text-align: center; /* Center align the text */
+    width: 90%; 
+    text-align: center; 
 }
-
 
 .sidebar ul li a:hover, .sidebar ul li a.active {
     background-color: #ddd;
@@ -58,41 +56,36 @@ h2{
     font-size: 20px;
 }
 
-
-/* Style for the image container */
 .image-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Add space between the images */
-    background-color: #f4f4f4; /* Set the background color for the container */
-    padding: 10px; /* Add some padding */
-    margin-left: 240px; /* Adjusted based on sidebar width */
-    /* padding-top: 90px; /* Adjust the padding as needed to create space 
-    scroll-margin-top: 100px; /* Adjust the scroll margin to create space when linking  */
+    justify-content: space-between; 
+    background-color: #f4f4f4; 
+    padding: 10px; 
+    margin-left: 240px; 
 }
 
 .image-container div {
-    width: 48%; /* Set each image container to 48% of the width */
-    margin-bottom: 20px; /* Add some space below each image */
-    background-color: #e0e0e0; /* Set the background color for each image box */
+    width: 48%; 
+    margin-bottom: 20px; 
+    background-color: #e0e0e0; 
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add some shadow for better visual separation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-/* Style for the images */
+
 .image-container img {
-    width: 95%; /* Ensure the image takes full width of the container */
+    width: 95%; 
     height: auto; /* Maintain the aspect ratio */
-    max-width: 100%; /* Ensure the image does not exceed container width */
+    max-width: 100%; 
     display: block;
-    margin: 0 auto; /* Center the images */
-    height: 350px; /* Set a fixed height for all images */ 
+    margin: 0 auto; 
+    height: 350px; 
     object-fit: cover; /* Ensure image fits within the set dimensions */
 }
 
-/* Style for the text below images */
 .image-container p {
-    text-align: center; /* Center the text */
+    text-align: center; 
     margin-top: 10px;
     font-weight: bold;
 }
@@ -103,33 +96,30 @@ h2{
 }
 
 
-
-/* Media query for tablets and smaller screens */ 
 @media (max-width: 770px) {
      .image-container {
-         margin-left: 0; /* Remove left margin for smaller screens */ 
-         justify-content: center; /* Center align the images */ 
-         /* margin-bottom: 300px; */
+         margin-left: 0;  
+         justify-content: center;  
         } 
         .image-container div {
-             width: 100%; /* Set each image container to 100% of the width */
+             width: 100%;
          
             }
               .sidebar {
-                 position: fixed; /* Make sidebar static for smaller screens */ 
-                 width: 100%; /* Make sidebar full width */ 
+                 position: fixed; 
+                 width: 100%; 
                  left: 0; 
                  height: 180px; 
-                 box-shadow: none; /* Remove box shadow */ 
+                 box-shadow: none; 
                  z-index: 1000;
                 } 
                 .sidebar ul { 
-                    flex-direction: row; /* Change to row direction */ 
-                    justify-content: space-around; /* Add space between menu items */ 
+                    flex-direction: row; 
+                    justify-content: space-around; 
                 
                 } 
                 .sidebar ul li { 
-                    border: none; /* Remove border for smaller screens */ 
+                    border: none; 
                 } 
                 .sidebar ul li a:hover, .sidebar ul li a.active {
                     background-color: #ddd;
@@ -152,13 +142,12 @@ h2{
     }
             }     
     
-/* Media query for mobile devices */ 
 @media screen and  (max-width: 480px) {
 
     .sidebar {
         display: flex;
         flex-direction: column; 
-        align-items: center; /* Centers items horizontally */
+        align-items: center; 
         padding: 7px;
         height: 140px;
     }
@@ -168,36 +157,28 @@ h2{
         justify-content: center;
         padding-bottom: 0;
         font-size: 12px;
-        /* border-right: 1px solid white; */
     }
 
     .sidebar a:not(:last-child) {
-        border-right: 1px solid white; /* Adds right border to all links except the last */
+        border-right: 1px solid white; 
     }
 
     .sidebar ul li a {
-        width: 100%; /* Makes links full width */
-        text-align: center; /* Centers text */
+        width: 100%; 
+        text-align: center; 
         padding: 3px;
     }
     
-   
-
-
 
     .image-container { 
-        margin-left: 0; /* Remove left margin */ 
+        margin-left: 0; 
         justify-content: center;
      
      }
     .image-container div {
-         width: 100%; /* Full width images */ 
+         width: 100%; 
         
         }  
 }
         
-
-
-
-
 

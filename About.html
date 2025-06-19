@@ -33,13 +33,12 @@ h2{
     flex: 1;
     background: rgba(255, 255, 255, 0.8);
     padding: 40px;
-    /* top: 10px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align content to the left */
+    align-items: flex-start;
     margin-left: 20%; 
-   margin-right: 25%;
+    margin-right: 25%;
 }
 
 .header {
@@ -48,14 +47,14 @@ h2{
 
 .carousel-container {
     position: relative;
-    width: 90%; /* Adjust width to fit within the remaining space */
-    height: 300px; /* Adjust height to fit content */
+    width: 90%; 
+    height: 300px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align carousel items to the left */
+    align-items: flex-start; 
     overflow: hidden;
-    margin-top: 23px; /* Add margin to separate from h2 */
+    margin-top: 23px; 
 }
 
 .carousel-item {
@@ -65,20 +64,20 @@ h2{
     opacity: 0;
     overflow-y: auto; /* Enable vertical scrolling */
     animation: carousel 36s linear infinite; /* Adjusted to allow longer content */
-    padding-right: 10px; /* Add padding to avoid content being cut off */
+    padding-right: 10px;
     box-sizing: border-box;
 }
 
 #item1 {
-    animation-delay: 1s; /* Ensure item1 appears after the header */
+    animation-delay: 1s; 
 }
 
 #item2 {
-    animation-delay: 12s; /* Adjust timing */
+    animation-delay: 12s; 
 }
 
 #item3 {
-    animation-delay: 23s; /* Adjust timing */
+    animation-delay: 23s;
 }
 
 @keyframes fadeInLeft {
@@ -123,11 +122,6 @@ h2{
 
 @media  screen and (max-width:480px){
 .animated-content {
-    /* margin-right: -50px;
-    margin-left: 15%;
-    margin-top: 200px;
-  margin-bottom: 50px; */
-
   margin: 70px -70px 50px 13% ;
 }
 .carousel-container {
@@ -170,23 +164,23 @@ h2{
         </div>
     </div>
 
- <!-- Footer placeholder -->
+
  <div id="footer-placeholder"></div>
 
  <script>
-  // JavaScript to load the combined header and footer from the parent directory
+ 
   fetch('header_Footer.html')
       .then(response => response.text())
       .then(data => {
-          // Create a temporary element to parse the response
+         
           const temp = document.createElement('div');
           temp.innerHTML = data;
 
-          // Extract and insert the header content
+        
           const headerContent = temp.querySelector('header').outerHTML;
           document.getElementById('header-placeholder').innerHTML = headerContent;
 
-          // Extract and insert the footer content
+       
           const footerContent = temp.querySelector('footer').outerHTML;
           document.getElementById('footer-placeholder').innerHTML = footerContent;
       });

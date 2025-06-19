@@ -28,7 +28,7 @@ h1{
    
     display: flex;
     justify-content: space-around; 
-    align-items: center;    /*Center items vertically */
+    align-items: center;   
     position: fixed;
     width: 100%;
     top: 61px;
@@ -95,7 +95,6 @@ h1{
     background-image: url(../assets/pexels-chanwalrus-972741861.jpg);
     background-size: cover;
     height: 700px; 
-    /* height: 100vh; */
     position: relative; 
     top: 0;
     overflow: hidden;
@@ -129,7 +128,7 @@ h1{
     border: 2px solid #ccc;
     border-radius: 15px;
     padding: 4px 15px;
-    margin: 20px auto; /* Center horizontally */
+    margin: 20px auto;
     background-color: rgba(85, 83, 83, 0.1); 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 600px; 
@@ -207,7 +206,7 @@ h1{
 
 .content-section img {
     max-width: 30%; 
-    margin-right:10px; /* Space between image and text */
+    margin-right:10px; 
     flex-shrink: 0; /* Prevent image from shrinking */ 
 }
 
@@ -217,21 +216,12 @@ h1{
 
 input::placeholder {
 color: #121110; 
-/* font-weight: bold; */
 }
 
-/* .last{
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
-} */
 
 @media  screen and (max-width:770px){
    /* Center the background image */
-   .top {
+.top {
     background-position: center;
     height: 910px;
 
@@ -306,23 +296,19 @@ color: #121110;
     }
  
    
-    /* Specific adjustments to maintain the second image position before "Our Story" */
     #about {
         display: flex;
         flex-direction: column-reverse; /* Ensure the image comes before text in "Our Story" */
     }
 
-    /* Set h3 tags to black */
     .text-center h3 {
         color: black;
     }
 
-    /* Set p tags to grey */
     .text-center p {
         color: grey;
     } 
 
-    /* Center the background image */
     .top {
         background-position: center;
         height: 810px;
